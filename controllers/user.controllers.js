@@ -12,7 +12,7 @@ const register = async (req, res) => {
         message: "User already exixts, Please login",
       });
     } else {
-      const hashPassword = await bcrypt.hash(password, process.env.SALT);
+      const hashPassword = await bcrypt.hash(password, 4);
       const newUser = new userModel({
         name,
         email,
