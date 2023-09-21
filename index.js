@@ -6,6 +6,11 @@ const { orderRouter } = require("./routes/orderRoute");
 const app = express();
 app.use(express.json());
 
+app.get("/", (req,res) => {
+
+  res.json({message:"Working"})
+})
+
 app.use("/api/user", userRouter);
 app.use("api/books", bookRouter);
 app.use("/api", orderRouter);
