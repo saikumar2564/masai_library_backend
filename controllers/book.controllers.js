@@ -3,6 +3,7 @@ const { bookModel } = require("../model/bookModel");
 const booksData = async (req, res) => {
   try {
     const books = await bookModel.find();
+    console.log(books)
     res.status(200).send({ message: "All Books Fetched", books });
   } catch (error) {
     console.log(error);
