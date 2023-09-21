@@ -10,7 +10,7 @@ const bookRouter = express.Router();
 
 bookRouter.get("/", booksData);
 bookRouter.get("/:id", booksData);
-bookRouter.post("/", bookRegistration);
+bookRouter.post("/add", bookRegistration);
 bookRouter.patch("/:id", updateBook);
 bookRouter.delete("/:id", deleteBook);
 

@@ -23,6 +23,7 @@ const singleBooksData = async (req, res) => {
 
 const bookRegistration = async (req, res) => {
   const payload = req.body;
+  console.log(payload)
   try {
     const newBook = new bookModel(payload);
     await newBook.save();
